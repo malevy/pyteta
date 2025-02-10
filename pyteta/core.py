@@ -58,7 +58,7 @@ def run(config = Config):
         content = file.read()
 
     conversation.append(
-        {MessageFields.ROLE: WellKnownRoles.SYSTEM, MessageFields.CONTENT: content}
+        {MessageFields.ROLE: WellKnownRoles.ASSISTANT, MessageFields.CONTENT: content}
     )
 
     client = OpenAI(api_key=config.ApiKey)

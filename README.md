@@ -51,11 +51,23 @@ The precedence of locations is:
 - `.env.config` (lowest)
 
 ## Using the Assistant
-To use the assistant, activate the virtual environment. Then run the agent with the following:
+To use the assistant, activate the virtual environment.
+```bash
+$ source ./venv/Scripts/Activate
+```
+
+Then run the agent:
 ```bash
 $ python pyteta
 ```
 The assistant's prompt is `>>`.
+
+### Deactivate the virtual environment
+If needed, you can leave the virtual environment by exiting the terminal 
+or 
+```
+$ deactivate
+```
 
 ### Verify the configuration
 Use the following requests to verify the assistants configuration:
