@@ -58,7 +58,7 @@ def run(config = Config):
         content = file.read()
 
     conversation.append(
-        {MessageFields.ROLE: WellKnownRoles.ASSISTANT, MessageFields.CONTENT: content}
+        {MessageFields.ROLE: WellKnownRoles.SYSTEM, MessageFields.CONTENT: content}
     )
 
     client = OpenAI(api_key=config.ApiKey)
@@ -118,7 +118,7 @@ def run(config = Config):
 
                     next_state = States.CALL_FUNCTION
                 else:
-                    conversation_message[MessageFields.CONTENT] = modelMessage.content
+                    conversation_message[MessageFields.CONTENT] = modelMessage.content if modelMessage.content else "{ no response from agent }"
                     _print_message(conversation_message)
                     next_state = States.GET_USER_INPUT
                     

@@ -102,14 +102,18 @@ def list_files(params, config=Config):
         "folders": [],
     }
 
-    for item in real_folder.iterdir():
-        if item.is_file():
-            response["files"].append(item.name)
-        elif item.is_dir():
-            response["folders"].append(item.name)
+    try:
 
-    return response
+        for item in real_folder.iterdir():
+            if item.is_file():
+                response["files"].append(item.name)
+            elif item.is_dir():
+                response["folders"].append(item.name)
 
+        return response
+
+    except OSError as e:
+        return {"status": "error", "message": f"{e.strerror}"}
 
 def create_folder(params, config=Config):
     folder = pathlib.Path(params["folderspec"])
@@ -123,7 +127,11 @@ def create_folder(params, config=Config):
     folder_to_create = _make_real_path(
         _STUDENT_PLACEHOLDER_ROOT, config.StudentRoot, folder
     )
-    folder_to_create.mkdir(parents=True, exist_ok=True)
+
+    try:
+        folder_to_create.mkdir(parents=True, exist_ok=True)
+    except OSError as e:
+        return {"status": "error", "message": f"{e.strerror}"}
 
     return {
         "status": "success",
@@ -158,6 +166,9 @@ def copy_folder(params, config=Config):
         }
     real_dest = _make_real_path(_STUDENT_PLACEHOLDER_ROOT, config.StudentRoot, dest)
 
-    shutil.copytree(real_source, real_dest, dirs_exist_ok=True)
+    try:
+        shutil.copytree(real_source, real_dest, dirs_exist_ok=True)
 
-    return {"status": "success", "message": "folder was copied successfully"}
+        return {"status": "success", "message": "folder was copied successfully"}
+    except shutil.Error as e:
+        return {"status": "error", "message": f"{e.exception}"}
