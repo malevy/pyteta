@@ -172,3 +172,7 @@ def copy_folder(params, config=Config):
         return {"status": "success", "message": "folder was copied successfully"}
     except shutil.Error as e:
         return {"status": "error", "message": f"{e.exception}"}
+    except FileNotFoundError as nf:
+        return {"status": "error", "message": f"{nf.strerror}"}
+    except FileExistsError as fe:
+        return {"status": "error", "message": f"{fe.strerror}"}
