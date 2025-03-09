@@ -30,6 +30,9 @@ Each unit contains sub-folders similar to:
 The materials are stored in the folder SOURCE.
 Students access a copy of the materials from the STUDENT folder. the STUDENT folder is also organized by into modules and units, identical to the SOURCE folder.
 
+-- TASKS --
+To "publish" materials means to copy one or more folders from the SOURCE folder to the STUDENT folder.
+
 -- CALENDAR --
 We are using the following calendar for this session:
 - Module 1
