@@ -22,16 +22,17 @@ Example unit names:
 "05b_Review_Day" - is the second part of the fifth unit. It has the name 'Review Day'
 
 Each unit contains sub-folders similar to:
-- exercises/        exercise files
-- lecture/          source files for lectures
+- exercise/         exercise materials (files)
+- lecture/          lecture materials (files)
 - tutorial/         guided walkthrough 
-- tutorial-final/   results of the guided walkthrough
+- tutorial-final/   completed guided walkthrough
 
 The materials are stored in the folder SOURCE.
 Students access a copy of the materials from the STUDENT folder. the STUDENT folder is also organized by into modules and units, identical to the SOURCE folder.
 
 -- TASKS --
 To "publish" materials means to copy one or more folders from the SOURCE folder to the STUDENT folder.
+To "make the lecture-final" means to copy the lecture/ folder to a new one named lecture-final/.
 
 -- CALENDAR --
 We are using the following calendar for this session:
