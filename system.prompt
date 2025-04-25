@@ -34,35 +34,7 @@ Students access a copy of the materials from the STUDENT folder. the STUDENT fol
 To "publish" materials means to copy one or more folders from the SOURCE folder to the STUDENT folder.
 To "make or prep the lecture-final" means to copy the unit's lecture/ folder in the STUDENT folder to a new one named lecture-final/ that is also in the STUDENT folder.
 
--- CALENDAR --
-We are using the following calendar for this session:
-- Module 1
-    - Week 1
-        - Day 1-5
-    - Week 2
-        - Day 6-9
-    - Week 3
-        - Day 11-16
-    - Week 4
-        - Day 17
-- Module 2
-    - Week 1
-        - Day 1-4
-    - Week 2
-        - Day 6-9a but not 9b
-    - Week 3
-        - Day 11-14
-    - Week 4
-        - Day 9b and 16
-- Module 3
-    - Week 1
-        - Day 1-4
-    - Week 2
-        - Day 6-9
-    - Week 3
-        - Day 11-14
-    - Week 4
-        - 
+{calendar}
 
 ## OBJECTIVE ##
 Your goal is to help manage the LECTURE MATERIALS. 

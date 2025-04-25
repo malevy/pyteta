@@ -7,9 +7,16 @@ def _convert_to_bool(s):
 
 
 class Config:
-    ApiKey = str(os.getenv("OPENAI_API_KEY"))
-    Model = os.getenv("OPENAI_MODEL")
-    SourceRoot = pathlib.Path(os.getenv("PYTETA_SOURCE_ROOT"))
-    StudentRoot = pathlib.Path(os.getenv("PYTETA_STUDENT_ROOT"))
-    ShowToolResponses = _convert_to_bool(os.getenv("PYTETA_SHOW_TOOL_RESPONSE"))
-    ShowToolUsage = _convert_to_bool(os.getenv("PYTETA_SHOW_TOOL_USAGE"))
+    model = os.getenv("OPENAI_MODEL")
+    temperature = float(os.getenv("OPENAI_TEMPERATURE", 0.0))
+    source_root = pathlib.Path(os.getenv("PYTETA_SOURCE_ROOT"))
+    student_root = pathlib.Path(os.getenv("PYTETA_STUDENT_ROOT"))
+    show_tool_responses = _convert_to_bool(os.getenv("PYTETA_SHOW_TOOL_RESPONSE"))
+
+
+class ConfigKeys:
+    model = "model"
+    temperature = "temperature"
+    source_root = "source_root"
+    student_root = "student_root"
+    show_tool_responses = "show_tool_responses"
