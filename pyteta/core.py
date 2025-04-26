@@ -1,3 +1,4 @@
+from datetime import date
 from termcolor import colored
 from langgraph.prebuilt import ToolNode, tools_condition
 from langgraph.graph import MessagesState
@@ -32,7 +33,7 @@ def get_system_prompt(config) -> SystemMessage:
     with open("system.prompt", "r") as file:
         system_prompt = file.read()
 
-    system_message = system_prompt.format(calendar=calendar_prompt)
+    system_message = system_prompt.format(calendar=calendar_prompt, today=date.today())
     return SystemMessage(content=system_message)
 
 
