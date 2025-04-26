@@ -31,7 +31,7 @@ def list_files(folder_spec: str, config: RunnableConfig):
         a dictionary with the following keys:
             status (str): "success" or "error"
             message (str): an error or success message
-            folderSpec (str): the path to the folder of interest
+            folder_spec (str): the path to the folder of interest
             files (list): a list of files in the folder
             folders (list): a list of folders in the folder
     """
@@ -57,7 +57,7 @@ def list_files(folder_spec: str, config: RunnableConfig):
 
     response = {
         "status": "success",
-        "folderSpec": f"{folder}",
+        "folder_spec": f"{folder}",
         "files": [],
         "folders": [],
     }
