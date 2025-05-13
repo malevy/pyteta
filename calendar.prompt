@@ -1,28 +1,28 @@
 -- CALENDAR --
 We are using the following calendar for this session:
-- Module 1
-    - Week 1
-        - Days 1-5
-    - Week 2
-        - Days 6-10
-    - Week 3
-        - Days 11-15
-    - Week 4
-        - Days 16-17
-- Module 2
-    - Week 1
-        - Days 1-5
-    - Week 2
-        - Days 6-9a but not 9b
-        - Day 10
-    - Week 3
-        - Days 11-15
-    - Week 4
-        - Days 9b and 16
-- Module 3
-    - Week 1
-        - Days 1-5
-    - Week 2
-        - Days 6-10
-    - Week 3
-        - Days 11-14
+
+- module 1
+    - Week 1 (starts 2025-05-19)
+        - units 1-5a
+    - Week 2 (starts 2025-05-27)
+        - units 6-9
+    - Week 3 (starts 2025-06-02)
+        - units 11-14
+    - Week 4 (starts 2025-06-09)
+        - units 16 and 17
+- module 2
+    - Week 1 (starts 2025-06-16)
+        - units 1-4
+    - Week 2 (starts 2025-06-23)
+        - units 6-9a 
+    - Week 3 (starts 2025-06-30)
+        - units 11-14
+    - Week 4 (starts 2025-07-7)
+        - units 9b and 16
+- module 3
+    - Week 1 (starts 2025-06-14)
+        - units 1-4
+    - Week 2 (starts 2025-06-21)
+        - units 6-9
+    - Week 3 (starts 2025-06-28)
+        - units 11-14
